@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "580b2107-11bb-4d9c-b138-a1b7721f2f3d",
+		"name": "crudMahasiswa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40938264"
+	},
+	"item": [
+		{
+			"name": "Input Data Mahasiswa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nim\": 1122026,\r\n    \"nama\": \"Sultan Afdan Zamzami\",\r\n    \"jurusan\": \"Sistem Informasi\",\r\n    \"fakultas\": \"Fakultas Rekayasa Industri\",\r\n    \"domisili\": \"Bandung\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mahasiswa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mahasiswa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lihat Data Mahasiswa (All)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mahasiswa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mahasiswa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lihat Data Mahasiswa (by NIM)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mahasiswa/1122002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mahasiswa",
+						"1122002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data Mahasiswa (by NIM)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nim\": \"1122092\",\r\n    \"nama\": \"Rahmat\",\r\n    \"jurusan\": \"Hukum Tata Negara\",\r\n    \"fakultas\": \"Fakultas Hukum\",\r\n    \"domisili\": \"Depok\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mahasiswa/1122001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mahasiswa",
+						"1122001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus Data Mahasiswa (by NIM)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mahasiswa/1122001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mahasiswa",
+						"1122001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
